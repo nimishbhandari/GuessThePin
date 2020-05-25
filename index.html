@@ -1,65 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Number Guessing Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="PROP_icon.png">
+    <link rel="stylesheet" href="main.css">
+    <title>GuessWhat</title>
 
-    <style>
-        html {
-            font-family: sans-serif;
-        }
-
-        body {
-            width: 50%;
-            max-width: 800px;
-            min-width: 480px;
-            margin: auto;
-        }
-    </style>
 </head>
 
 <body>
-    <h1>Guess The Number</h1>
+    <!-- header -->
+    <h1 class="head">
+        <div class="img">
+            <a href="https://nimishbhandari.github.io/Portfolio/" target="_blank">
+                <img src="PROP_icon.png" alt="Logo">
+            </a>
+        </div>
+        <div class="write">
+            Guess<span id="hl1">What</span>
+        </div>
+    </h1>
 
-    <p>We have selected a random number between 1 - 10.
-        See if you can guess it.</p>
+    <div class="container">
+        <!-- intro para -->
+        <p class="intro">
+            <span class="intro1">WELCOME TO GUESS ME!</span> <br>
+            It is a simple game where you will be given a number between a specific range and you have to guess it. <br>
+            Easy?? Try some difficult levels then. <br><br>
+            <span class="intro2">LET'S PLAY!</span><br>
+            Please select a level for yourself.
+        </p>
 
-    <div class="form">
-        <label for="guessField">Enter a guess: </label>
-        <input type="text" id="guessField" class="guessField">
-        <input type="submit" value="Submit guess" class="guessSubmit" id="submitguess">
+        <!-- level selection buttons -->
+        <div class="level">
+            <button onclick="select(10)">Ultra NOOB</button>
+            <button onclick="select(100)">NOOB</button>
+            <button onclick="select(1000)">Average</button>
+            <button onclick="select(10000)">Pro</button>
+            <button onclick="select(100000)">Ultra Pro</button>
+            <button onclick="select(1000000)">Legend</button>
+            <button onclick="select(10000000)">God Level</button>
+            <button onclick="select(10000000000)">Crush's Phone Number</button>
+            <button onclick="select(10000000000000000)">Dad's Debit card number</button>
+        </div>
+
+        <!-- input guessed numbers -->
+        <div id="input">
+
+            <p id="instruction"></p>
+
+            <div class="form">
+                <label class="intro1" for="guessField">Enter a guess: </label>
+                <input type="text" id="guessField" class="guessField">
+                <input type="submit" value="Submit guess" class="guessSubmit" id="submitguess">
+            </div>
+
+            <p id="msg"></p>
+
+        </div>
     </div>
 
-    <script type="text/javascript">
+    <div class="copyright">
+        Copyright &copy; All rights reserved May,2020 | Designed by
+        <a href="https://nimishbhandari.github.io/Portfolio/" target="_blank">
+            <span class="prop">PROP</span><span class="prop2">rietor</span>
+        </a>
+    </div>
+    <!-- end of html  -->
 
-        // random value generated 
-        var y = Math.floor(Math.random() * 10 + 1);
-
-        // counting the number of guesses 
-        // made for correct Guess 
-        var guess = 1;
-
-        document.getElementById("submitguess").onclick = function () {
-
-            // number guessed by user	 
-            var x = document.getElementById("guessField").value;
-
-            if (x == y) {
-                alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
-                    + guess + " GUESS ");
-            }
-            else if (x > y) /* if guessed number is greater 
-				than actual number*/ {
-                guess++;
-                alert("OOPS SORRY!! TRY A SMALLER NUMBER");
-            }
-            else {
-                guess++;
-                alert("OOPS SORRY!! TRY A GREATER NUMBER")
-            }
-        } 
-    </script>
+    <!-- javascript starts -->
+    <script src="main.js"></script>
 </body>
 
 </html>
