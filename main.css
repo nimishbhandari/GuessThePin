@@ -14,7 +14,7 @@ body {
 .container {
     min-height: 100vh;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.777);
+    background-color: rgba(0, 0, 0, 0.577);
 }
 
 .level {
@@ -27,7 +27,7 @@ body {
 .level>button {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.753);
-    color: #5288fd;
+    color: #999999;
     border: none;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 #hl1 {
-    color: rgb(253, 56, 155);
+    color: #ffda06;
 }
 
 #input {
@@ -60,12 +60,12 @@ body {
 }
 
 .intro1 {
-    color: rgb(253, 56, 155);
+    color: #ffda06;
     font-weight: bold;
 }
 
 .intro2 {
-    color: rgb(10, 216, 10);
+    color: #ffda06;
     font-weight: bold;
 }
 
@@ -80,7 +80,7 @@ body {
     margin-bottom: 10px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.753);
-    color: #5288fd;
+    color: #ffda06;
     border: none;
 }
 
